@@ -10,8 +10,8 @@ CScene_GAME1::CScene_GAME1()
 {
 	CBaseObject* pdfTYPE_ENEMY;
 	_iRemainEnemy = 0;
-	for (int iCnt = 0; iCnt < 3; iCnt++)
-		for (int iCnt2 = 0; iCnt2 < 20; iCnt2++)
+	for (int iCnt = 0; iCnt < 3; ++iCnt)
+		for (int iCnt2 = 0; iCnt2 < 20; ++iCnt2)
 		{
 			pdfTYPE_ENEMY = (CBaseObject*)new CEnemy(8 + (iCnt2 + 1) * 3, 5 + iCnt * 3);
 			CSceneMgr->_lst.push_back(pdfTYPE_ENEMY);

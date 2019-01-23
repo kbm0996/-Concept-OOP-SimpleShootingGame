@@ -9,7 +9,7 @@ char szScreenBuffer[dfSCREEN_HEIGHT][dfSCREEN_WIDTH];
 void Buffer_Clear()
 {
 	memset(szScreenBuffer, 0x20, sizeof(szScreenBuffer));
-	for (int iCnt = 0; iCnt < dfSCREEN_HEIGHT; iCnt++)
+	for (int iCnt = 0; iCnt < dfSCREEN_HEIGHT; ++iCnt)
 		szScreenBuffer[iCnt][dfSCREEN_WIDTH - 1] = NULL;
 }
 
@@ -25,7 +25,7 @@ void Draw_Sprite(int iPosX, int iPosY, char ch)
 
 void Buffer_Flip()
 {
-	for (int iCnt = 0; iCnt < dfSCREEN_HEIGHT; iCnt++)
+	for (int iCnt = 0; iCnt < dfSCREEN_HEIGHT; ++iCnt)
 	{
 		cs_MoveCursor(0, iCnt);
 		printf(szScreenBuffer[iCnt]);

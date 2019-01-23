@@ -20,7 +20,7 @@ public:
 protected:
 	bool bFlag;
 	int iX, iY;
-	int iHP;;
+	int iHP;
 	int iType;
 };
 
