@@ -28,26 +28,28 @@
   **figure 5. Workflow-Update()*
   
 ## 📑 구성
-### 📋 _config.h
- 게임 설정을 하드코딩으로 변경할 수 있는 
-### 📋 _main.cpp
- 프로그램이 실행되는 메인 함수
-### 📋 CSceneMgr.h/cpp
- Scene들을 총체적으로 관리하는 객체
-### 📋 LinkedList.h
- Objectlist 역할. 반복자 패턴이 사용된 연결리스트
+**📋 _config.h** : 게임 설정을 하드코딩으로 변경할 수 있는 헤더
+
+**📋 _main.cpp** : 프로그램이 실행되는 메인 함수
+
+**📋 CSceneMgr.h/cpp** : Scene들을 총체적으로 관리하는 객체
+
+**📋 LinkedList.h** : Objectlist 역할. 반복자 패턴이 사용된 연결리스트
+
 ### 📂 Objects
-#### 📋 BaseObject.h
- 이하 객체들의 부모 클래스. 인터페이스 역할을 하는 순수 가상 함수들을 포함하는 추상 클래스
-#### 📋 CPlayer.h/cpp, KeyProcess.h/cpp
- Player 객체와 Player 객체를 제어하는 키보드 조작을 Queue에 삽입
-#### 📋 CEnemy.h/cpp, 📋 CBoss.h/cpp, 📋 CBossBullet.h/cpp, 📋 CBullet.h/cpp
+
+**📋 BaseObject.h** : 이하 객체들의 부모 클래스. 인터페이스 역할을 하는 순수 가상 함수들을 포함하는 추상 클래스
+
+📋 CPlayer.h/cpp, 📋 CEnemy.h/cpp, 📋 CBoss.h/cpp, 📋 CBossBullet.h/cpp, 📋 CBullet.h/cpp
+
 ### 📂 Render
-#### 📋 Console.h/cpp
-  Buffer를 Console에 출력
-#### 📋 Draw.h/cpp
-  Player, Enemy, Boss, Bullet, Scene등을 Buffer에 반영
+
+**📋 Console.h/cpp** : Buffer를 Console에 출력
+
+**📋 Draw.h/cpp** : Player, Enemy, Boss, Bullet, Scene등을 Buffer에 반영
+
 ### 📂 Scenes
-#### 📋 BaseScene.h
- 이하 Scene 객체들의 부모 클래스. 인터페이스 역할을 하는 순수 가상 함수들을 포함하는 추상 클래스
-#### 📋 CScene_1Title.h/cpp, 📋 CScene_2Gameover.h/cpp, 📋 CScene_Stage1.h/cpp, 📋 CScene_Stage2.h/cpp
+
+**📋 BaseScene.h** :  이하 Scene 객체들의 부모 클래스. 인터페이스 역할을 하는 순수 가상 함수들을 포함하는 추상 클래스
+
+📋 CScene_1Title.h/cpp, 📋 CScene_2Gameover.h/cpp, 📋 CScene_Stage1.h/cpp, 📋 CScene_Stage2.h/cpp
