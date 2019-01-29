@@ -13,9 +13,9 @@
 // {
 //		cs_Initial();
 //
-//		cs_MoveCursor(0, 0);	// Set cursor pos 0,0
+//		cs_SetCursor(0, 0);	// Set cursor pos 0,0
 //		printf("abcde");		// Output text at 0,0
-//		cs_MoveCursor(20, 10);	// Set cursor pos 20,10
+//		cs_SetCursor(20, 10);	// Set cursor pos 20,10
 //		printf("abcde");		// Output text at 20,10
 //
 //		// Clear Screen
@@ -25,9 +25,6 @@
 
 #ifndef __CONSOLE__
 #define __CONSOLE__
-
-#define dfSCREEN_WIDTH		81		// horizontal 80 spaces + NULL
-#define dfSCREEN_HEIGHT		25		// vertical 24 spaces 
 
 //-------------------------------------------------------------
 // Initialize Console
@@ -39,7 +36,7 @@ void cs_Initial(void);
 // Move Console Cursor
 //
 //-------------------------------------------------------------
-void cs_MoveCursor(int iPosX, int iPosY);
+void cs_SetCursor(int iPosX, int iPosY);
 
 //-------------------------------------------------------------
 // Clear Console

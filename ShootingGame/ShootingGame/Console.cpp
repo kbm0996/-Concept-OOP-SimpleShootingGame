@@ -1,6 +1,7 @@
 #include <windows.h>
 #include <stdio.h>
 #include "Console.h"
+#include "_config.h"
 
 HANDLE  g_hConsole;
 
@@ -21,7 +22,7 @@ void cs_Initial(void)
 	SetConsoleCursorInfo(g_hConsole, &stConsoleCursor);
 }
 
-void cs_MoveCursor(int iPosX, int iPosY)
+void cs_SetCursor(int iPosX, int iPosY)
 {
 	COORD stCoord;
 	stCoord.X = iPosX;
@@ -40,7 +41,7 @@ void cs_ClearScreen(void)
 	{
 		for (iCountX = 0; iCountX < dfSCREEN_WIDTH; iCountX++)
 		{
-			cs_MoveCursor(iCountX, iCountY);
+			cs_SetCursor(iCountX, iCountY);
 			printf(" ");
 		}
 	}
